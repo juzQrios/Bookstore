@@ -16,7 +16,7 @@ function BooksList({ books }) {
             </tr>
           </thead>
           <tbody>
-            {books.map( book => <Book key={book.id} book={book} />)}
+            {books.map(book => <Book key={book.id} book={book} />)}
           </tbody>
         </table>
       </div>
