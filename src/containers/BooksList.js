@@ -1,4 +1,6 @@
 import React from 'react'
+import Book from '../components/Book'
+
 // It should connect to the Redux store and fetch the books from the state.
 function BooksList() {
   return (
@@ -13,11 +15,13 @@ function BooksList() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="col">1</th>
-              <th scope="col">Harry Potter</th>
-              <th scope="col">I Have no Idea</th>
-            </tr>
+            <Book book={
+              {
+                id: 1,
+                title: "Harry Potter",
+                category: "I have no idea"
+              }
+            } />
           </tbody>
         </table>
       </div>
