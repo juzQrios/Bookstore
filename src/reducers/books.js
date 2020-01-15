@@ -1,7 +1,7 @@
 const initialState = {
   books: [
     {
-      id: 0,
+      id: Math.random,
       title: "Harry Potter",
       category: "Kids"
     }
@@ -15,7 +15,7 @@ const bookReducer = (state = initialState, action) => {
       books: [
         ...state.books,
         {
-          id: state.books.length,
+          id: Math.random(),
           title: action.title,
           category: action.category
         }
@@ -23,10 +23,7 @@ const bookReducer = (state = initialState, action) => {
     };
     case "REMOVE_BOOK": return {
       ...state,
-      books: [
-        ...state.books.slice(0, action.id),
-        ...state.books.slice(action.id + 1)
-      ]
+      books: state.books.filter( book=> book.id!==action.id )
     };
     default: return state;
   }

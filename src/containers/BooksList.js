@@ -1,8 +1,8 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Book from '../components/Book'
 
-// It should connect to the Redux store and fetch the books from the state.
-function BooksList() {
+function BooksList({books}) {
   return (
     <div className="container BooksList">
       <div className="mx-auto col-8 shadow-lg mt-3">
@@ -15,18 +15,19 @@ function BooksList() {
             </tr>
           </thead>
           <tbody>
-            <Book book={
-              {
-                id: 1,
-                title: "Harry Potter",
-                category: "I have no idea"
-              }
-            } />
+            {console.log(books)}
+            {books.map(book =>
+              <Book key={book.id} book={book}></Book>
+            )}
           </tbody>
         </table>
       </div>
     </div>
   )
 }
-
-export default BooksList;
+const mapStateToProps = (state) => {
+  return {
+    books: state.books
+  }
+}
+export default connect(mapStateToProps)(BooksList);
