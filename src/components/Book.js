@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Book({ book }) {
   return (
@@ -7,7 +8,10 @@ function Book({ book }) {
       <th scope="col">{ book.title }</th>
       <th scope="col">{ book.category }</th>
     </tr>
-  )
+  );
 }
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 
 export default Book;

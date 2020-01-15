@@ -1,8 +1,9 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import Book from '../components/Book'
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
-function BooksList({books}) {
+function BooksList({ books }) {
   return (
     <div className="container BooksList">
       <div className="mx-auto col-8 shadow-lg mt-3">
@@ -15,19 +16,17 @@ function BooksList({books}) {
             </tr>
           </thead>
           <tbody>
-            {console.log(books)}
-            {books.map(book =>
-              <Book key={book.id} book={book}></Book>
-            )}
+            {books.map( book => <Book key={book.id} book={book} />)}
           </tbody>
         </table>
       </div>
     </div>
-  )
+  );
 }
-const mapStateToProps = (state) => {
-  return {
-    books: state.books
-  }
-}
+const mapStateToProps = state => ({
+  books: state.books,
+});
+BooksList.propTypes = {
+  books: PropTypes.array.isRequired,
+};
 export default connect(mapStateToProps)(BooksList);

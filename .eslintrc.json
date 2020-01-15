@@ -18,6 +18,8 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/forbid-prop-types": "off"
+    
   }
 }

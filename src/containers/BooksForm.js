@@ -1,26 +1,30 @@
-import React from 'react'
+import React from 'react';
 
 function BooksForm() {
-  const bookCategory = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
+  const bookCategory = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <div className="container">
       <div className="col-5 mx-auto">
         <form className="form">
           <div className="form-group">
-            <label>Title</label>
-            <input type="text" className="form-control" name="title" id="title"></input>
+            <label htmlFor="title">
+              Title
+              <input type="text" className="form-control" name="title" id="title" />
+            </label>
           </div>
           <div className="form-group">
-            <label>Category</label>
-            <select className="form-control">
-              {bookCategory.map((val, ind) => <option key={ind}>{val}</option>)}
-            </select>
+            <label htmlFor="category">
+             Category
+              <select className="form-control">
+                {bookCategory.map(val => <option key={val}>{val}</option>)}
+              </select>
+            </label>
           </div>
           <button type="submit" className="btn btn-secondary">submit</button>
         </form>
       </div>
     </div>
-  )
+  );
 }
 
 export default BooksForm;
