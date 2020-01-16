@@ -23,7 +23,7 @@ class BooksForm extends React.Component {
     });
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
@@ -60,7 +60,7 @@ class BooksForm extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  createBook: book => {
+  createBook: (book) => {
     dispatch(createBook(book));
   },
 });

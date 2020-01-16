@@ -19,7 +19,7 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "import/extensions": "off",
-    "react/forbid-prop-types": "off"
-    
+    "react/forbid-prop-types": "off",
+    "prefer-destructuring": "off"
   }
 }

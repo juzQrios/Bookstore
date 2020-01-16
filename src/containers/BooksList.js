@@ -6,7 +6,7 @@ import { removeBook } from '../actions/index';
 
 
 function BooksList({ books, removeBook }) {
-  const handleRemoveBook = id => {
+  const handleRemoveBook = (id) => {
     removeBook(id);
   };
   return (
