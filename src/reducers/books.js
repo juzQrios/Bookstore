@@ -1,7 +1,7 @@
 const initialState = {
   books: [
     {
-      id: Math.random,
+      id: Math.random(),
       title: 'Harry Potter',
       category: 'Kids',
     },
@@ -16,9 +16,9 @@ const bookReducer = (state = initialState, action) => {
         id: Math.random(),
         title: action.title,
         category: action.category,
-      }
+      },
     ];
-    case 'REMOVE_BOOK': return state.books.filter(book => book.id !== action.id);
+    case 'REMOVE_BOOK': return state.filter((book) => book.id !== action.id);
     default: return state;
   }
 };
