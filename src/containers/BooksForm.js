@@ -40,7 +40,7 @@ class BooksForm extends React.Component {
       title: '',
       category: 'Action',
       titleError: '',
-    })
+    });
   }
 
   render() {
@@ -51,7 +51,7 @@ class BooksForm extends React.Component {
           <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="title">
-                Title: 
+                Title:
                 <span>{titleError}</span>
                 <input ref={this.titleInput} type="text" className="form-control" name="title" id="title" value={title} required />
               </label>
