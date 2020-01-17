@@ -16,9 +16,10 @@ class BooksForm extends React.Component {
       category: categoryOne,
       titleError: ''
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = () => {
+  handleChange(){
     this.setState({
       title: this.titleInput.current.value,
       category: this.categoryInput.current.value,
