@@ -7,14 +7,14 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.bookCategory = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    
+
     this.titleInput = React.createRef();
     this.categoryInput = React.createRef();
-    const [categoryOne] = this.bookCategory
+    const [categoryOne] = this.bookCategory;
     this.state = {
       title: '',
       category: categoryOne,
-      titleError: ''
+      titleError: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,34 +31,35 @@ class BooksForm extends React.Component {
     event.preventDefault();
     const { title, category } = this.state;
     if (!/\S/.test(title)) {
-      this.setState({ titleError: "Title must not contain only whitespaces" })
-      return
+      this.setState({ titleError: 'Title must not contain only whitespaces' });
+      return;
     }
     const { createBook } = this.props;
     createBook({ title, category });
     this.setState({
       title: '',
       category: 'Action',
-      titleError: ''
+      titleError: '',
     })
   }
 
   render() {
-    const { title,titleError}=this.state
+    const { title, titleError, category } = this.state;
     return (
       <div className="container">
         <div className="col-5 mx-auto">
           <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="title">
-                Title <span>{titleError}</span>
+                Title: 
+                <span>{titleError}</span>
                 <input ref={this.titleInput} type="text" className="form-control" name="title" id="title" value={title} required />
               </label>
             </div>
             <div className="form-group">
               <label htmlFor="category">
                 Category
-                <select ref={this.categoryInput} className="form-control" value={this.state.category}>
+                <select ref={this.categoryInput} className="form-control" value={category}>
                   {this.bookCategory.map(val => <option key={val}>{val}</option>)}
                 </select>
               </label>
