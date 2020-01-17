@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter '
 
 
 function BooksList({ books, removeBook }) {
@@ -12,6 +13,7 @@ function BooksList({ books, removeBook }) {
   return (
     <div className="container BooksList">
       <div className="mx-auto col-8 shadow-lg mt-3">
+        <div className="p-4"><CategoryFilter /></div>
         <table className="table">
           <thead>
             <tr>
