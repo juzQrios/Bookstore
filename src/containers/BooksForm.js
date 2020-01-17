@@ -16,13 +16,19 @@ class BooksForm extends React.Component {
       category: categoryOne,
       titleError: '',
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.handleCategoryChange = this.handleCategoryChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange() {
+  handleTitleChange() {
     this.setState({
       title: this.titleInput.current.value,
+    });
+  }
+
+  handleCategoryChange() {
+    this.setState({
       category: this.categoryInput.current.value,
     });
   }
@@ -48,18 +54,18 @@ class BooksForm extends React.Component {
     return (
       <div className="container">
         <div className="col-5 mx-auto">
-          <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          <form className="form" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="title">
                 Title:
                 <span>{titleError}</span>
-                <input ref={this.titleInput} type="text" className="form-control" name="title" id="title" value={title} required />
+                <input ref={this.titleInput} type="text" className="form-control" name="title" id="title" onChange={this.handleTitleChange} value={title} required />
               </label>
             </div>
             <div className="form-group">
               <label htmlFor="category">
                 Category
-                <select ref={this.categoryInput} className="form-control" value={category}>
+                <select ref={this.categoryInput} className="form-control" onChange={this.handleCategoryChange} value={category}>
                   {this.bookCategory.map(val => <option key={val}>{val}</option>)}
                 </select>
               </label>
