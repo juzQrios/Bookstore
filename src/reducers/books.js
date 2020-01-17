@@ -1,12 +1,10 @@
-const initialState = {
-  books: [
-    {
-      id: Math.random(),
-      title: 'Harry Potter',
-      category: 'Kids',
-    },
-  ],
-};
+const initialState = [
+  {
+    id: Math.random(),
+    title: 'Harry Potter',
+    category: 'Kids',
+  },
+];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
