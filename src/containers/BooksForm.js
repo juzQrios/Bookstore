@@ -17,27 +17,29 @@ class BooksForm extends React.Component {
       titleError: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(){
+  handleChange() {
     this.setState({
       title: this.titleInput.current.value,
       category: this.categoryInput.current.value,
     });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit(event) {
     event.preventDefault();
-    const { title, category,titleError } = this.state;
+    const { title, category } = this.state;
     if (!/\S/.test(title)) {
-      this.setState({ titleError: "Title must contain only white spaces characters" })
+      this.setState({ titleError: "Title must not contain only whitespaces" })
       return
     }
     const { createBook } = this.props;
     createBook({ title, category });
     this.setState({
       title: '',
-      category: 'Action'
+      category: 'Action',
+      titleError: ''
     })
   }
 
