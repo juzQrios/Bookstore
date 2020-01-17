@@ -6,7 +6,7 @@ import { removeBook } from '../actions/index';
 
 
 function BooksList({ books, removeBook }) {
-  const handleRemoveBook = (id) => {
+  const handleRemoveBook = id => {
     removeBook(id);
   };
   return (
@@ -33,7 +33,7 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 const mapDispatchToProps = dispatch => ({
-  removeBook: id => dispatch(removeBook(id)),
+  removeBook: (id) => dispatch(removeBook(id)),
 });
 BooksList.propTypes = {
   books: PropTypes.array.isRequired,
