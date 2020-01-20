@@ -13,7 +13,8 @@ function Book({ book, clickDelete }) {
           <button
             type="button"
             className="btn mainColor"
-            onClick={() => clickDelete(book.id)}>
+            onClick={() => clickDelete(book.id)}
+          >
             Delete
           </button>
         </div>

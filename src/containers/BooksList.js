@@ -25,13 +25,13 @@ function BooksList({
       <div className="mx-auto col-9 shadow-lg mt-3 ">
         <div className="p-3">
           <Header onFilterChange={handleFilterChange} />
-        </div >
-            {
-              visible.map(book => <Book clickDelete={handleRemoveBook} key={book.id} book={book} />)
+        </div>
+        {
+          visible.map(book => <Book clickDelete={handleRemoveBook} key={book.id} book={book} />)
         }
-        <div className="clearfix"></div>
+        <div className="clearfix" />
       </div>
-      
+
     </div>
   );
 }
