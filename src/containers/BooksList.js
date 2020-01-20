@@ -22,26 +22,16 @@ function BooksList({
   const visible = getVisibleBooks(books, filter);
   return (
     <div className="container BooksList">
-      <div className="mx-auto col-9 shadow-lg mt-3">
-        <div className="p-4">
+      <div className="mx-auto col-9 shadow-lg mt-3 ">
+        <div className="p-3">
           <Header onFilterChange={handleFilterChange} />
-        </div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Book-id</th>
-              <th scope="col">Title</th>
-              <th scope="col">Category</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
+        </div >
             {
               visible.map(book => <Book clickDelete={handleRemoveBook} key={book.id} book={book} />)
-            }
-          </tbody>
-        </table>
+        }
+        <div className="clearfix"></div>
       </div>
+      
     </div>
   );
 }
