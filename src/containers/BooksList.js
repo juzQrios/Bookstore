@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter ';
+import Header from '../components/Header';
 
 function BooksList({
   books,
@@ -22,9 +22,9 @@ function BooksList({
   const visible = getVisibleBooks(books, filter);
   return (
     <div className="container BooksList">
-      <div className="mx-auto col-8 shadow-lg mt-3">
+      <div className="mx-auto col-9 shadow-lg mt-3">
         <div className="p-4">
-          <CategoryFilter onFilter={handleFilterChange} />
+          <Header onFilterChange={handleFilterChange} />
         </div>
         <table className="table">
           <thead>

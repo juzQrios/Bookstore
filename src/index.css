@@ -1,0 +1,17 @@
+.Header {
+  height: 95px;
+  background-color: #ffffff;
+}
+
+.Header h1 {
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
