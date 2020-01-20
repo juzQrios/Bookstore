@@ -2,7 +2,7 @@
 
 > A very simple React-Redux application.
 
-<!-- ![Application Screenshot](./screenshot.png) -->
+![Application Screenshot](./screenshot.png)
 
 ## Built With
 
@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-<!-- [Live on Heroku]() -->
+[Live on Heroku](https://bookstore-ad1.herokuapp.com/)
 
 ## Getting Started
 
