@@ -53,24 +53,20 @@ class BooksForm extends React.Component {
     const { title, titleError, category } = this.state;
     return (
       <div className="container">
-        <div className="col-5 mx-auto">
-          <form className="form" onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="title">
-                Title:
-                <span>{titleError}</span>
-                <input ref={this.titleInput} type="text" className="form-control" name="title" id="title" onChange={this.handleTitleChange} value={title} required />
-              </label>
+        <div className="Line col-9" />
+        <div className="col-9 mx-auto">
+          <h3 className="form-title">ADD NEW BOOK</h3>
+          <form className="form d-flex" onSubmit={this.handleSubmit}>
+            <div className="form-group title mr-4">
+              <span>{titleError}</span>
+              <input ref={this.titleInput} type="text" placeholder="Title" className="form-control" name="title" id="title" onChange={this.handleTitleChange} value={title} required />
             </div>
-            <div className="form-group">
-              <label htmlFor="category">
-                Category
-                <select ref={this.categoryInput} className="form-control" onChange={this.handleCategoryChange} value={category}>
-                  {this.bookCategory.map(val => <option key={val}>{val}</option>)}
-                </select>
-              </label>
+            <div className="form-group category mr-4">
+              <select ref={this.categoryInput} placeholder="category" className="form-control" onChange={this.handleCategoryChange} value={category}>
+                {this.bookCategory.map(val => <option key={val}>{val}</option>)}
+              </select>
             </div>
-            <button type="submit" className="btn btn-secondary">submit</button>
+            <button type="submit" className="btn mainColor submit">submit</button>
           </form>
         </div>
       </div>
