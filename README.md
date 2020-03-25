@@ -48,6 +48,10 @@ While it is a good practice to test code, this project doesn't have any tests ri
 
 ### Deployment
 
+You can easily deploy this React application using one of the several methods to [Netlify](https://www.netlify.com).
+
+Easiest method being to deploy it from Git by clicking on the "[New site from Git](https://app.netlify.com/start)" button on Netlify dashboard.
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
