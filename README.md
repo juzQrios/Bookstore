@@ -1,61 +1,76 @@
-# Bookstore Project
+# Bookstore
 
-> A very simple React-Redux application.
+> A very simple React-Redux application built to learn Redux..
 
-![Application Screenshot](./screenshot.png)
+[//]: # (Screenshot, Application concept art etc)
+![Screenshot](./screenshot.png)
+
+[//]: # (Live Demo link)
+<p align="center">
+  <a href="https://bookstore-ad1.herokuapp.com/">Live Demo</a>
+</p>
 
 ## Built With
 
-- React
-- Redux
+* HTML
+* CSS
+* React
+* Redux
 
-## Live Demo
+## Get Started
 
-[Live on Heroku](https://bookstore-ad1.herokuapp.com/)
+### Setup
 
-## Getting Started
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-To get a local copy up and running follow these simple example steps.
-
-## Setup
-
-Clone this repository to your machine
+1. Clone this repository.
 
 ```bash
-git clone git@github.com:juzQrios/Bookstore.git
-cd Bookstore
+git clone git@github.com:juzQrios/bookstore.git
+cd bookstore
 ```
 
-## Install
-
-Install dependencies
+2. Install dependencies.
 
 ```bash
 npm install
 ```
 
-## Start local server
-
-In the project directory, run:
+3. Start the local server.
 
 ```bash
 npm start
 ```
 
-View the application at [`http://localhost:3000`](http://localhost:3000)
+4. Open <http://localhost:3000/> in a browser.
+
+### Tests
+
+While it is a good practice to test code, this project doesn't have any tests right now but I might add them in future.
+
+### Deployment
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to checkout this project's [Kanban board](https://github.com/juzQrios/bookstore/projects/2) or [issues page](https://github.com/juzQrios/bookstore/issues).
+
+## Acknowledgments
+
+* [Create React App](https://github.com/facebook/create-react-app)
+
+## License
+
+This project is [MIT](./LICENSE) licensed.
 
 ## Authors
 
-👤 **Addo Forison**
+### Addo Forison
 
-- Github: [@Forison](https://github.com/Forison)
+* GitHub: [@Forison](https://github.com/Forison)
+* Email: <addoboakyeforison@gmail.com>
 
-👤 **Darshan**
+#### Darshan
 
-- Github: [@juzQrios](https://github.com/juzQrios)
-
-## Reviewers
-
-> Additional support from [Microverse](https://www.microverse.org/) team.
+* GitHub: [@juzQrios](https://github.com/juzQrios)
+* Linkedin: [Darshan J](https://www.linkedin.com/in/jayadevdarshan/)
+* Email: <jayadev.darshan@gmail.com>
